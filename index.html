@@ -17,9 +17,39 @@
 
 <body>
 
-    <h1>Hello!</h1>
-    <p id="test"></p>
-    <button type="button" class="btn btn-light">Light</button>
+    <div class="container-fluid">
+        <!-- nav bar -->
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/bunny_icon.gif" width="50" height="50" class="d-inline-block align-top" alt="">
+                BUNNY GIFS!
+            </a>
+        </nav>
+
+        <!-- search bar -->
+        <nav class="navbar navbar-light bg-light form-align">
+            <div class="form-group col-md-10">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            </div>
+            <div class="form-group col-md-2">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </div>
+        </nav>
+
+        <!-- buttons -->
+        <div class="bg-light">
+            <div class="row">
+                <div class="col-md-12" id="gif-buttons">
+                    <button type="button" class="btn btn-primary btn-sm">Small button</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- gifs -->
+        <div id="gif-imgs"></div>
+
+    </div>
 
     <!-- bootstrap js scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
