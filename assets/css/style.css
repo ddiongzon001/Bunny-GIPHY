@@ -1,11 +1,14 @@
+/* background */
 body{
     background-color:black;
 }
 
+/* search box */
 .search-width{
     width: 1000px;
 }
 
+/* array buttons */
 #gif-buttons{
     margin: 1%;
 }
