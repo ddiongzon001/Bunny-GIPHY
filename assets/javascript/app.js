@@ -38,12 +38,25 @@ function renderButtons() {
 renderButtons();
 
 //BUTTON CLICK FUNCTIONS
-
 //WHEN USER CLICKS ON RECOMMENDED BUTTONS
 $(document).on('click', "#gif-button", function(){
 
     //testing out if anything clicks works
     alert("you click a button and it worked!");
 
+    //pulls the data-attribute and stores it in a variable
+    //NEED THE GIFPY LINK
+    //AJAX CALL
+    //DISLAY THE GIFS
+
     
 })
+
+//WHEN USER CLICKS ON SEARCH FUNCTIONS
+//function to add the button to the button div
+    //pulls the data-attribute and stores it in a variable
+    //NEED THE GIFPY LINK
+    //AJAX CALL
+    //DISLAY THE GIFS
+
+
