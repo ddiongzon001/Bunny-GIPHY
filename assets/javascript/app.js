@@ -38,9 +38,12 @@ function renderButtons() {
 renderButtons();
 
 //BUTTON CLICK FUNCTIONS
-button.on('click', function(){
-    //Deletes content inside button Div
-    buttonDiv.empty();
+
+//WHEN USER CLICKS ON RECOMMENDED BUTTONS
+$(document).on('click', "#gif-button", function(){
+
+    //testing out if anything clicks works
+    alert("you click a button and it worked!");
 
     
 })
