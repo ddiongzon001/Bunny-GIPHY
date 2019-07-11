@@ -110,6 +110,8 @@ $("#submit").on("click", function(event){
     renderButtons();
 });
 
+
+//ahhhh i dont understand why this isn't working!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //when user clicks on gif; gif either animates or is still
 $("<img>").on("click", function(){
 
