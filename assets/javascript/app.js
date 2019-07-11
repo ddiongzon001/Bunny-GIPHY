@@ -62,15 +62,22 @@ $(document).on('click', "#gif-button", function () {
 
         for (var i = 0; i < results.length; i++) {
             
+            //creates div for both the rating and the image
             var div = $('<div>');
+            
+            // creates a p tage for the rating and sends it to the HTML page
             var p = $('<p>');
             p.text("Rating: " + results[i].rating);
 
+            //creates the image tag and pulls the url for the gif from the response
             var bunnyImage = $("<img>");
             bunnyImage.attr("src", results[i].images.fixed_height.url);
 
+            //appends the rating and the gif to a div
             div.append(p);
             div.append(bunnyImage);
+
+            //prepends the div to the gifDiv in the HTML
             gifDiv.prepend(div);
 
         }
@@ -80,6 +87,15 @@ $(document).on('click', "#gif-button", function () {
 })
 
 //WHEN USER CLICKS ON SEARCH FUNCTIONS
+$("#test").on("click", function(event){
+    // prevents default from being stored
+    event.preventDefault();
+
+    //grabs the text from the search bar into a variable
+    var userTopic = $("#hello").val();
+
+    console.log(userTopic);
+});
 //function to add the button to the button div
 //pulls the data-attribute and stores it in a variable
 //NEED THE GIFPY LINK
