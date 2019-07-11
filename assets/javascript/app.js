@@ -41,12 +41,21 @@ renderButtons();
 //WHEN USER CLICKS ON RECOMMENDED BUTTONS
 $(document).on('click', "#gif-button", function(){
 
-    //testing out if anything clicks works
-    alert("you click a button and it worked!");
-
-    //pulls the data-attribute and stores it in a variable
-    //NEED THE GIFPY LINK
+    //create a new variable that stores the data-attribute of the topic
+    var topicName = $(this).data("name");
+    
+    //api key variable and queryURL variables
+    var api = "SoRSlrz9spbXDknc99YFPDDvVZrNd9w9";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=" + api + "&q=" + topicName + "&limit=10";
+    
     //AJAX CALL
+    $.ajax({
+        url: queryURL,
+        method: 'GET'
+    }).then(function (response) {
+        console.log(queryURL);
+        console.log(response);
+    });
     //DISLAY THE GIFS
 
     
