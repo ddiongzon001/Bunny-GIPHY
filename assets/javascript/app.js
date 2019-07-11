@@ -20,7 +20,7 @@ function renderButtons() {
         var button = $("<button>");
 
         //adds bootstrap class
-        button.addClass("btn btn-primary btn sm");
+        button.addClass("btn btn-info btn sm");
 
         //adds css style id
         button.attr("id", "gif-button");
@@ -72,7 +72,9 @@ $(document).on('click', "#gif-button", function () {
 
             //creates the image tag and pulls the url for the gif from the response
             var bunnyImage = $("<img>");
-            bunnyImage.addClass("bunnyGif")
+            
+            //adds the class, src, and data attributes to be used for later
+            bunnyImage.attr("id", "dumb");
             bunnyImage.attr("src", results[i].images.fixed_height_small_still.url);
             bunnyImage.attr("data-still", results[i].images.fixed_height_small_still.url);
             bunnyImage.attr("data-animate", results[i].images.fixed_height_small.url);
@@ -109,4 +111,18 @@ $("#submit").on("click", function(event){
 });
 
 //when user clicks on gif; gif either animates or is still
-$()
+$("<img>").on("click", function(){
+
+    var state = $(this).attr('data-state');
+    console.log(state === 'still');
+
+    if (state === 'still'){
+        console.log("went thru 1")
+        $(this).attr("data-state", "animate");
+        $(this).attr("src", $(this).attr("data-animate"));
+    } else{
+        console.log("went thru 2")
+        $(this).attr("data-state", "still");
+        $(this).attr("src", $(this).attr("data-still"));
+    }
+});

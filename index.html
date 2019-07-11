@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bunny Gifs!</title>
 
+    <!-- Google font link -->
+    <link href="https://fonts.googleapis.com/css?family=Barriecito&display=swap" rel="stylesheet">
+
     <!-- bootstrap css link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -22,24 +25,32 @@
         <nav class="navbar navbar-light bg-light" id="width">
             <a class="navbar-brand" href="#">
                 <img src="assets/images/bunny_icon.gif" width="50" height="50" class="d-inline-block align-top" alt="">
-                BUNNY GIFS!
+                <h1>BUNNY GIFS!</h1>
             </a>
         </nav>
 
+        <div class="row bg-light" id="width">
+            <div class="col-md-12">
+                <p>Pick from the recommended bunny buttons below. Don't see what you like? Type in a new search and
+                    press that button!</p>
+            </div>
+        </div>
+
         <!-- search bar -->
         <form>
-        <nav class="navbar navbar-light bg-light form-align" id="width">
-            <div class="form-group col-md-10">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search-input">
-            </div>
-            <div class="form-group col-md-2">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="submit">Search</button>
-            </div>
-        </nav>
-    </form>
+            <nav class="navbar navbar-light bg-light form-align" id="width">
+                <div class="form-group col-md-11">
+                    <input class="form-control input-lg" type="search" placeholder="Search" aria-label="Search"
+                        id="search-input">
+                </div>
+                <div class="form-group col-md-1">
+                    <button class="btn btn-outline-info my-2 my-sm-0" type="submit" id="submit">Search</button>
+                </div>
+            </nav>
+        </form>
 
         <!-- buttons -->
-        <div class="bg-light" id = "width">
+        <div class="bg-light" id="width">
             <div class="row">
                 <div class="col-md-12" id="gif-buttons-div">
                     <!-- buttons go here in javascript -->
@@ -49,12 +60,13 @@
 
 
         <!-- gifs -->
-        <div class="bg-light" id="width">
+        <div class="bg-light background-gif-div" id="width">
             <div class="row">
                 <div class="col-md-12" id="gif-imgs-div">
                     <!-- gifs go here in javascript -->
+                    <!-- hello -->
                 </div>
-            </div>      
+            </div>
         </div>
 
     </div>
