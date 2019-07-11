@@ -64,6 +64,7 @@ $(document).on('click', "#gif-button", function () {
             
             //creates div for both the rating and the image
             var div = $('<div>');
+            div.addClass("col")
             
             // creates a p tage for the rating and sends it to the HTML page
             var p = $('<p>');
@@ -87,17 +88,18 @@ $(document).on('click', "#gif-button", function () {
 })
 
 //WHEN USER CLICKS ON SEARCH FUNCTIONS
-$("#test").on("click", function(event){
+$("#submit").on("click", function(event){
     // prevents default from being stored
     event.preventDefault();
 
     //grabs the text from the search bar into a variable
-    var userTopic = $("#hello").val();
+    var userTopic = $("#search-input").val();
 
-    console.log(userTopic);
+    //removes the user's input from the search bar
+    $("#search-input").val("");
+
+    //push variable into the topics array
+    topics.push(userTopic);
+
+    renderButtons();
 });
-//function to add the button to the button div
-//pulls the data-attribute and stores it in a variable
-//NEED THE GIFPY LINK
-//AJAX CALL
-//DISLAY THE GIFS
