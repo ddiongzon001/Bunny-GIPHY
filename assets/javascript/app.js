@@ -64,7 +64,7 @@ $(document).on('click', "#gif-button", function () {
             
             //creates div for both the rating and the image
             var div = $('<div>');
-            div.addClass("col")
+            div.addClass("col");
             
             // creates a p tage for the rating and sends it to the HTML page
             var p = $('<p>');
@@ -72,7 +72,11 @@ $(document).on('click', "#gif-button", function () {
 
             //creates the image tag and pulls the url for the gif from the response
             var bunnyImage = $("<img>");
-            bunnyImage.attr("src", results[i].images.fixed_height.url);
+            bunnyImage.addClass("bunnyGif")
+            bunnyImage.attr("src", results[i].images.fixed_height_small_still.url);
+            bunnyImage.attr("data-still", results[i].images.fixed_height_small_still.url);
+            bunnyImage.attr("data-animate", results[i].images.fixed_height_small.url);
+            bunnyImage.attr("data-state", "still");
 
             //appends the rating and the gif to a div
             div.append(p);
@@ -103,3 +107,6 @@ $("#submit").on("click", function(event){
 
     renderButtons();
 });
+
+//when user clicks on gif; gif either animates or is still
+$()
