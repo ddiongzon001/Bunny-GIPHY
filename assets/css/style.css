@@ -6,6 +6,8 @@ body{
 #width{
     width: 80%;
     margin-left: 10%;
+    border-left: 20px groove #17a2b8;
+    border-right: 20px groove #17a2b8;
 }
 
 .background-gif-div{
@@ -28,8 +30,8 @@ h1{
 
 /* array buttons */
 #gif-buttons-div{
-    margin-left: 3%;
-    margin-right: 3%;
+    margin-left: 1%;
+    margin-right: 25%;
 }
 
 #gif-button{
