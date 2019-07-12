@@ -74,7 +74,7 @@ $(document).on('click', "#gif-button", function () {
             var bunnyImage = $("<img>");
             
             //adds the class, src, and data attributes to be used for later
-            bunnyImage.attr("id", "dumb");
+            bunnyImage.attr("id", "activate");
             bunnyImage.attr("src", results[i].images.fixed_height_small_still.url);
             bunnyImage.attr("data-still", results[i].images.fixed_height_small_still.url);
             bunnyImage.attr("data-animate", results[i].images.fixed_height_small.url);
@@ -95,7 +95,7 @@ $(document).on('click', "#gif-button", function () {
 
 //WHEN USER CLICKS ON SEARCH FUNCTIONS
 $("#submit").on("click", function(event){
-    // prevents default from being stored
+    // allows user to hit enter instead of just clicking the button
     event.preventDefault();
 
     //grabs the text from the search bar into a variable
@@ -111,18 +111,19 @@ $("#submit").on("click", function(event){
 });
 
 
-//ahhhh i dont understand why this isn't working!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //when user clicks on gif; gif either animates or is still
-$("<img>").on("click", function(){
+$(document).on("click", "#activate", function(){
 
+    //whatever the user clicks if it has the id activate it stores the data-state attribute into this variable
     var state = $(this).attr('data-state');
     console.log(state === 'still');
 
+    // checks if state is still, if its is changes it to animate if not it changes it to still
     if (state === 'still'){
         console.log("went thru 1")
         $(this).attr("data-state", "animate");
         $(this).attr("src", $(this).attr("data-animate"));
-    } else{
+    } else{ 
         console.log("went thru 2")
         $(this).attr("data-state", "still");
         $(this).attr("src", $(this).attr("data-still"));
