@@ -81,8 +81,8 @@ $(document).on('click', "#gif-button", function () {
             bunnyImage.attr("data-state", "still");
 
             //appends the rating and the gif to a div
-            div.append(p);
             div.append(bunnyImage);
+            div.append(p);
 
             //prepends the div to the gifDiv in the HTML
             gifDiv.prepend(div);
